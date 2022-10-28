@@ -23,15 +23,15 @@ target = 6
 p two_sum(nums, target)
 
 
-def two_sum(nums, target)
-  dict = {}
-  nums.each_with_index do |n, i|
-    if dict[target - n]
-      return dict[target - n], i
-    end
-    dict[n] = i
-  end
-end
+# def two_sum(nums, target)
+#   dict = {}
+#   nums.each_with_index do |n, i|
+#     if dict[target - n]
+#       return dict[target - n], i
+#     end
+#     dict[n] = i
+#   end
+# end
 
 # store each value in the array into hash called dict, which the number is the key and the index is the value
 # if dict[target - n] exist, that means n + [target - n] = target is a truth
