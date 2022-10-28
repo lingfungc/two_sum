@@ -3,13 +3,11 @@
 # @return {Integer[]}
 
 def two_sum(nums, target)
-  index = []
-  for i in 0...nums.length do
-    for j in (i + 1)...nums.length do
-      index = [i, j] if nums[i] + nums[j] == target
+  nums.each_with_index do |value, i|
+    ((i + 1)...nums.length).each do |j|
+      return [i, j] if nums[i] + nums[j] == target
     end
   end
-  index
 end
 
 nums = [2,7,11,15]
